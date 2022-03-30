@@ -1,0 +1,100 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.header {
+    background-color: transparent
+}
+.section-advertising {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+.body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    color: black;
+    font-size: medium;
+    background-color: rgb(255, 255, 255);
+}
+.productos {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    padding: 50px;
+    padding-top: 50px;
+}
+
+.instafeed-title {
+    position: relative;
+    top: 0%;
+    left: auto;
+    color: black;
+    font-size: 230%;
+    font-style:normal;
+
+}
+
+.super-container {
+    width: 100%;
+    overflow: hidden ;
+}
+
+.products {
+    padding-top: 94px;
+    padding-bottom: 98px;
+   
+}
+
+div {
+    display: block;
+    position: relative;
+}
+.products-container {
+    display: flex;
+    
+}
+
+
+.main-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    text-align: center;
+
+}
+
+/*ICONO DE WPP EN SCROLL A LA DERECHA*/
+.item-fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+}
+.pie-de-pag {
+    background-color: #fcd1c6;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.redes {
+    position: relative;
+    padding-right: 10%;
+    display: grid;
+    grid-template-rows: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.redes a {
+    padding-top: 100px;
+    padding-bottom: 20%;
+}
+.footer.second.row {
+    padding-left: 8%;
+    width: 31%;
+}
