@@ -84,3 +84,6 @@ const renderizarElemento = ()=>{
         }
     }
 }
+
+//* fecha */
+const hoy = new Date ("April 06, 2022");
