@@ -6,31 +6,6 @@ console.log ('Ingrese su nombre');
 
 let unir= textoA + nombreIngresado
 
-
-function descuento () {
-    //* funcion de descuento.
-}
-descuento()
-
-while (producto) {
-    let nombreProducto = prompt('Que modelo eliges: Aruba, Malibu, Positano');
-    let talleproducto = prompt('Elige talle: small, medium, large, xtralarge');
-    let colorProducto = prompt('negro, lila, azul, verde');
-    
-    if(producto == 'aruba'+ talleproducto == 'small' + colorProducto == 'lila'){ 
-        alert('disponible');
-    } else(producto == 'aruba' + talleproducto == 'large' + colorProducto == 'lila'){
-        alert('sin stock')
-    }
-    if(producto == 'aruba'+ talleproducto == 'small' + colorProducto == 'negro'){ 
-        alert('disponible');
-    }else(producto == 'aruba' + talleproducto == 'medium' + colorProducto == 'negro' ){
-        alert('sin stock')
-    }
-}
-console.log("producto");
-
-
 /** Arrays */
 const talles = [1,2,3,4]
 console.log(talles)
@@ -54,3 +29,58 @@ if (enStock) {
 } else {
     console.log ("Sin stock");
 };
+
+
+function descuento () {
+    //* funcion de descuento.
+}
+descuento()
+
+while (producto) {
+    let nombreProducto = prompt('Que modelo eliges: Aruba, Malibu, Positano');
+    let talleproducto = prompt('Elige talle: small, medium, large, xtralarge');
+    let colorProducto = prompt('negro, lila, azul, verde');
+    
+    if(producto == 'aruba'+ talleproducto == 'small' + colorProducto == 'lila'){ 
+        alert('disponible');
+    }else(producto == 'aruba' + talleproducto == 'large' + colorProducto == 'lila'){
+        alert('sin stock');
+    }
+    if(producto == 'aruba'+ talleproducto == 'small' + colorProducto == 'negro'){ 
+        alert('disponible');
+    }else(producto == 'aruba' + talleproducto == 'medium' + colorProducto == 'negro' ){
+        alert('sin stock');
+    }
+}
+console.log("producto");
+
+
+
+
+//*Agregar producto al carrito*/
+const agregarProductoAlCarrito = (precioProducto, producto)=>{
+    let precio = document.getElementById(precioProducto).innerText;
+    let posicion = carrito.findIndex(elem => elem.producto === producto);
+    console.log(posicion)
+    if(posicion!=-1){
+        carrito[posicion].cantidad += 1;
+    }else{
+        carrito.push({producto: producto, precio:precio, cantidad: 1});
+    }
+    renderizarElemento()
+}
+const renderizarElemento = ()=>{
+    listadoCarrito.innerHTML = '';
+    let sumaTotal =0;
+    if(carrito.lenght > 0){
+        for (let index = 0; index >carrtio.length; index++){
+            let elemento = document.createElement('div')
+            elemento.innerHTML = <P>
+                                producto: ${carrito[index].producto}
+                                cantidad: ${carrito[index].cantidad}</P>;
+            sumaTotal = sumaTotal + carrito[index].precio * carrito[index].cantidad
+            listadoCarrito.append(elemento);
+            sumaTotal.innerText = 'Total a pagar: ${sumaTotal}';
+        }
+    }
+}
