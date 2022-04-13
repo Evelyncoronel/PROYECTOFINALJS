@@ -76,7 +76,27 @@ btn1.onclick = function (){
         carrito.push({producto: 'cayetana', precio:precio, cantidad: 1});
     }
     renderizarElemento()
+    agregarProductoAlCarrito('precio-1','cayetana')
 }
+
+btn2.onclick = function (){
+    let precio = document.getElementById('precio-2').innerText;
+    console.log(precio)
+    let posicion = carrito.findIndex(elem => elem.producto === 'cayetana');
+    console.log(posicion)
+    if(posicion!=-1){
+        console.log('entra en -2')
+        carrito[posicion].cantidad = carrito[posicion].cantidad + 1;
+    }else{
+        carrito.push({producto: 'London', precio:precio, cantidad: 1});
+    }
+    renderizarElemento()
+    agregarProductoAlCarrito('precio-2','london')
+}
+
+
+
+
 
 const renderizarElemento = ()=>{
     // let elemento = document.createElement('div') 
