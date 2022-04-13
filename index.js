@@ -54,7 +54,18 @@ while (producto) {
 }
 console.log("producto");
 
+//*Carrito con DOM*/
+let btn1 = document.getElementById('btn-1');
+let btn2 = document.getElementById('btn-2');
+let btn3 = document.getElementById('btn-3');
 
+let listadoCarrito = document.getElementById('carrito');
+let total = document.getElementById('total');
+
+btn1.onclick = function (){
+    let precio = document.getElementById('precio-1').innerText;
+    console.log(precio)
+}
 
 
 //*Agregar producto al carrito*/

@@ -7,10 +7,14 @@
     background-color: transparent
 }
 .section-advertising {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #0000004d;
     color: white;
 }
-
+.title-inicio {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
 
 .body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
