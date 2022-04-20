@@ -135,16 +135,20 @@ const renderizarElemento = ()=>{
 //* fecha */
 const hoy = new Date ("April 06, 2022");
 
-class Products {
-    set1 (nombre, precio, talle, color) {
-        this.nombre = nombre;
+//* carga de productos*/
+class Conjuntos {
+    set1 (id,precio,talle,color) {
+        this.id = nombre.length;
         this.precio = parseFloat (precio);
-        this.talle = talle;
+        this.talle = talle.touppercase ();
         this.color = color;
     }
+    detalle() {
+        return `TALLE ${this.talle} $ ${this.precio} `;
+    }
 }
-const Products = [];
-Products.push (new products ("cayetana", 1970, [small, medium, large], [rojo, blanco, negro]));
-Products.push (new products ("london", 1870, [small, medium, large], [ blanco, negro]));
-Products.push (new products ("london", 1970, [small, medium, large], [verde-ingles]));
+const Conjuntos = [];
+Conjuntos.push (new Conjuntos ("cayetana", 1970, [small, medium, large], [rojo, blanco, negro]));
+Conjuntos.push (new Conjuntos ("london", 1870, [small, medium, large], [ blanco, negro]));
+Conjuntos.push (new Conjuntos ("london", 1970, [small, medium, large], [verde-ingles]));
 localStorage.setItem('products', JSON.stringify(products))
