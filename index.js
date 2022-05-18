@@ -1,9 +1,9 @@
 //* Bienvenida */
 
 //*let textoA = 'Bienvenida a Baraco';
-let nombreIngresado= prompt ('Ingrese su nombre');
-console.log ('Ingrese su nombre');
-let unir= textoA + nombreIngresado;//
+let bienvenida = prompt ('Bienvenida a Baraco');
+console.log('bienvenida');
+
 
 /** Arrays */
 const talles = [1,2,3,4]
